@@ -20,14 +20,6 @@ jobs:
 
       - name: Generate extensions.json
         run: npm run generate-json
-
-      - name: Commit extensions.json
-        uses: stefanzweifel/git-auto-commit-action@v6
-        with:
-          commit_message: "chore: update extensions.json"
-          file_pattern: extensions.json
-          commit_user_name: "github-actions[memio-bot]"
-          commit_user_email: "support@memio.site"
     
       - name: Copy extensions.json to another repo
         uses: dmnemec/copy_file_to_another_repo_action@main

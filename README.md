@@ -28,59 +28,11 @@ In the tutorial example, we will demonstrate the entire process by creating an e
 5.  Modify the `rollup.config.mjs` file to point the input file path to the extension file you are developing, then bundle it using the `rollup -c` command;
 6.  Find your newly generated site extension in the `dist` directory and import it into the Memio application.
 
-## Submitting an Extension
+### Generate JSON File
 
-```markdown
-### 🔗 Involved Issue / 该 PR 相关 Issue
+You can use `scripts/generate-json.mjs` to generate a JSON file containing information for all extensions under the `app` directory, making it easier to import them into the Memio application.
 
-Close #
 
-### ✍️ description / 该站点的描述
-
-| Name | Value |
-| :--: | :--: |
-| Name | |
-| Url | |
-| Key | |
-| Lang | |
-
-### ✅ Checklist / 自查清单
-
-- [ ] New Extension / 新的扩展
-- [X] Extension Type / 扩展类型
-  - [ ] Article / 文章
-  - [ ] Picture / 图片
-  - [ ] Video / 视频
-  - [ ] Audio / 音频
-  - [ ] Novel / 小说
-- [ ] Is login required? / 是否需要登录
-  - [ ] Force / 强制
-- [ ] Is configuration required? / 是否需要参数配置
-  - [ ] Force / 强制
-- [ ] Are unit tests included? / 是否包含单元测试
-- [ ] Is there a chapters or index? / 是否有章节目录
-- [ ] Parse content(Media) after load? / 正文（媒体）解析是否是页面加载后
-
-### 📝 Note / 说明
-```
-
-### Issue Related
-
-You can fill in the Issue number related to this PR here. If there is no related Issue, please leave it blank. If your PR is merged, the related Issue will be automatically closed. If you want to close multiple Issues, please add another `Close #` separated by a space or comma. For example, `Close #123, Close #456` or `Close #123 Close #456`.
-
-### Description Related
-
-Provide the extension information for the site, including the title, URL link, a unique key, and supported languages.
-
-### Checklist
-
-This checklist helps to identify some of the features included in this extension. Please check the corresponding options according to your extension, so that reviewers can quickly check the content.
-
-> To check an item, change `[ ]` to `[x]`.
-
-### Note
-
-This section contains any additional information or comments you wish to share.
 
 ## ⚠️ Disclaimer
 
