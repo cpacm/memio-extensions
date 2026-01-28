@@ -17,7 +17,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
-
+        
+    - name: Generate extensions.json
+      run: npm run generate-json
+    
     - uses: ryand56/r2-upload-action@latest # Can be any release
       with:
         r2-account-id: ${{ secrets.R2_ACCOUNT_ID }}

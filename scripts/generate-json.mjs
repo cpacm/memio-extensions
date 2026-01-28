@@ -11,7 +11,7 @@ const mediaTypeMap = {
 
 const appDir = path.join(process.cwd(), 'app');
 const rawURL = 'https://r2.memio.site/'; // input your raw content url here
-const source = `https://github.com/memio-app/memio-extensions/blob/main/app`;
+const source = `https://github.com/cpacm/memio-extensions/blob/main/app`;
 
 async function reflectModule(filePath) {
     try {
