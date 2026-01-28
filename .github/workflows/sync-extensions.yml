@@ -27,7 +27,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.OTHER_REPO_ACCESS_TOKEN }}
         with:
           source_file: 'extensions.json'
-          destination_repo: 'memio-app/memio-docs'
+          destination_repo: 'memio-app/memio-document'
           destination_folder: '/public' # You can change this to a subfolder e.g. 'data/'
           user_email: 'support@memio.site'
           user_name: 'memio-bot'
