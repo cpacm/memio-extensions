@@ -1,0 +1,42 @@
+name: Sync extensions.json to another repo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # 或者你项目使用的 Node.js 版本
+
+      - name: Install dependencies
+        run: npm install # 假设你需要安装依赖
+
+      - name: Generate extensions.json
+        run: npm run generate-json
+
+      - name: Commit extensions.json
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: "chore: update extensions.json"
+          file_pattern: extensions.json
+          commit_user_name: "github-actions[memio-bot]"
+          commit_user_email: "support@memio.site"
+    
+      - name: Copy extensions.json to another repo
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.OTHER_REPO_ACCESS_TOKEN }}
+        with:
+          source_file: 'extensions.json'
+          destination_repo: 'memio-app/memio-docs'
+          destination_folder: '/public' # You can change this to a subfolder e.g. 'data/'
+          user_email: 'support@memio.site'
+          user_name: 'memio-bot'
+          commit_message: 'Update extensions.json from source repo'

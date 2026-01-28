@@ -1,0 +1,39 @@
+# dependencies
+/node_modules
+/**/node_modules
+/**/package-lock.json
+/**/yarn.lock
+/**/pnpm-lock.yaml
+
+# editor
+.idea
+.vscode
+.hbuilderx
+/**/.ide
+/**/.mini-ide
+/**/.swan
+/**/.vscode*
+/**/.cache
+
+# production
+/server
+/demos/**/utils/*
+
+# develop
+/test/pages/utils/*
+/test/reporters/**/*
+
+# misc
+.DS_Store
+
+# logs
+/*.log
+/npm-debug.log*
+/yarn-error.log
+junit.xml
+
+# Local History for Visual Studio Code
+.history/
+
+
+todo-list.txt
