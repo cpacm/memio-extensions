@@ -37,7 +37,7 @@ jobs:
             dist/audio/
             dist/novel/
             extensions.json
-        # destination-dir: artifacts # Can be anything as long as it is an actual path
+        destination-dir: / # Can be anything as long as it is an actual path
         output-file-url: true # defaults to true
         multipart-size: 5 # If the file size is greater than the value provided here, then use multipart upload
         max-retries: 3 # The maximum number of retries it takes to upload a multipart chunk until it moves on to the next part
